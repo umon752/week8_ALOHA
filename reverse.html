@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%- title %></title>
+  <title>Reservation details | ALOHA</title>
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
   <!-- material icon -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,11 +22,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-md-6 px-0 px-md-8 px-lg-0"
-    data-aos="fade-down">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-md-6 px-md-8 px-lg-0" data-aos="fade-down">
     <div class="container px-md-0">
-      <div
-        class="d-flex row-md-reverse align-items-center justify-content-between w-100 w-md-auto px-4 px-md-0 pb-4 pb-md-0">
+      <div class="d-flex row-md-reverse align-items-center justify-content-between w-100 w-md-auto">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,53 +32,108 @@
         <h1 class="h6">
           <a class="logo navbar-brand" href="./index.html">ALOHA</a>
         </h1>
-        <a class="nav-link d-md-none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <img src="./assets/images/profile.jpg" class="member__img rounded-circle d-inline mr-2">
-        </a>
+        <a class="nav-link text-dark d-md-none" href="./login.html">Login</a>
       </div>
 
-      <div class="collapse navbar-collapse bg-light bg-md-white py-3 py-md-0" id="navbarSupportedContent">
-        <ul class="navbar-nav text-center ml-auto">
-          <li class="nav-item dropdown d-none d-md-block py-2 py-md-0">
-            <a class="material-icons nav-link dropdown-toggle d-flex justify-content-center align-items-center d-flex align-items-center pr-md-9"
+      <div class="collapse navbar-collapse d-none d-md-block" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="material-icons nav-link dropdown-toggle d-flex justify-content-center align-items-center pr-9"
               href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               language
             </a>
-            <div class="dropdown-menu text-center text-md-left mt-2" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
               <a class="dropdown-item h6 py-2 mt-2" href="#">English</a>
               <a class="dropdown-item h6 py-2" href="#">繁體中文</a>
               <a class="dropdown-item h6 py-2 mb-2" href="#">Français</a>
             </div>
           </li>
-          <li class="nav-item dropdown d-none d-md-block">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <img src="./assets/images/profile.jpg" class="member__img rounded-circle d-inline mr-2">
-              David Lin
-            </a>
-            <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item h6 py-2 mt-2" href="#">My Orders</a>
-              <a class="dropdown-item h6 py-2" href="#">Edit Account Info</a>
-              <a class="dropdown-item h6 py-2 mb-2" href="#">Logout</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link pr-9" href="#">Sign up</a>
           </li>
-          <li class="nav-item d-md-none pb-2 py-md-0">
-            <a class="nav-link" href="./login.html">My Orders</a>
-          </li>
-          <li class="nav-item d-md-none pb-2 py-md-0">
-            <a class="nav-link" href="./login.html">Edit Account Info</a>
-          </li>
-          <li class="nav-item d-md-none py-md-0">
-            <a class="nav-link" href="./login.html">Logout</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <%- contents %>
+  
+<section class="reverse container">
+    <div class="row justify-content-center flex-md-row-reverse">
+        <div class="col-12 col-md-6 col-lg-4 bg-light bg-md-white p-4" data-aos="fade-left" data-aos-delay="600">
+            <!-- collapse -->
+            <div class="d-flex justify-content-between" data-aos="fade-up">
+                <div class="totalText--hide d-md-none">
+                    <span class="text-black-200 mr-2">Total</span>
+                    <span class="font-weight-bold">TWD 4,633</span>
+                </div>
+                <a href="#" class="arrowIcon--rotate font-weight-bold d-flex d-md-none" data-toggle="collapse"
+                    data-target="#reserveDetail" aria-controls="reserveDetail" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    DETAIL
+                    <span class="material-icons ml-1">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+
+            <!-- collapse -->
+            <div class="collapse bg-light w-100 p-6" id="reserveDetail">
+                <h3 class="h5 font-weight-bold mb-4">Booking details</h3>
+                <ul class="h6 text-black-200 border-bottom-white mb-6 pb-6">
+                    <li class="mb-2">17 June 2020 - 19 June 2020・2 nights</li>
+                    <li class="mb-2">2 adults・1 room</li>
+                    <li>Rachada Hotel</li>
+                </ul>
+                <h3 class="h5 font-weight-bold mb-4">Price summary</h3>
+                <ul class="h6 text-black-200 border-bottom-white mb-6 pb-6">
+                    <li class="d-flex justify-content-between mb-2">
+                        <span>Deluxe Suite with Pool</span>
+                        <span>TWD 3,960</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                        <span>VAT (7%)</span>
+                        <span>TWD 277</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                        <span>Property service charge</span>
+                        <span>TWD 396</span>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                    <span>Total</span>
+                    <span class="font-weight-bold">TWD 4,633</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mt-6" data-aos="fade-right" data-aos-delay="600">
+            <h2 class="font-weight-bold mb-6">Reservation details</h2>
+
+            <form>
+                <div class="form-group input-group-lg">
+                    <label for="name" class="mb-1">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group input-group-lg">
+                    <label for="email" class="mb-1">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group input-group-lg">
+                    <label for="phone" class="mb-1">Phone (optional)</label>
+                    <input type="phone" class="form-control" id="phone">
+                </div>
+                <a href="./reverse_success.html" class="btn btn-primary btn-lg font-weight-bold w-100 mb-2">REVERSE</a>
+                <a href="#" class="h6 text-center d-block">Reserve now, pay at stay</a>
+            </form>
+        </div>
+
+
+    </div>
+</section>
 
   <footer class="container border-top px-md-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-center">
