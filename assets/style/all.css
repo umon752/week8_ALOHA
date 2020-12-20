@@ -12617,6 +12617,10 @@ footer .footer__navLink__text {
         border-radius: 8px 0 0 8px; } }
     .member__list img {
       height: 226px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center center;
+         object-position: center center;
       border-radius: 8px 8px 0 0; }
       @media (min-width: 768px) {
         .member__list img {
