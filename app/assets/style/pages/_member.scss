@@ -39,7 +39,7 @@
         }
 
         img {
-            height: 226px;
+            @include img-cover(226px);
             border-radius: 8px 8px 0 0;
 
             @include media-breakpoint-up(md) {
