@@ -1,0 +1,34 @@
+.carousel-item {
+    img {
+        @include img-cover(315px);
+
+        @include media-breakpoint-up(md) {
+            height: 320px;
+        }
+    }
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(64px);
+
+    @include media-breakpoint-up(md) {
+        transform: translateY(96px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        transform: translateY(48px);
+    }
+}
+
+.carousel-control-prev {
+    @include media-breakpoint-up(xl) {
+        left: 132px;
+    }
+}
+
+.carousel-control-next {
+    @include media-breakpoint-up(xl) {
+        right: 132px;
+    }
+}

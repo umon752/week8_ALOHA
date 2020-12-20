@@ -1,0 +1,206 @@
+// hover 
+.hover-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.hover-opacity {
+    @include hover-linear;
+
+    &:hover {
+        @include hover-linear;
+        opacity: .9;
+    }
+}
+
+// cursor
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// rounded
+.rounded-top-lg {
+    border-top-left-radius: $border-radius-lg !important;
+    border-top-right-radius: $border-radius-lg !important;
+}
+
+
+
+// $width
+@mixin width($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $sizes {
+        .w#{$grid-breakpoints}-#{$key} {
+            width: $value !important;
+        }
+    }
+}
+
+// $hover-color
+@mixin hover-color($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $theme-colors {
+        .hover-text#{$grid-breakpoints}-#{$key} {
+            transition: all linear 300ms;
+
+            &:hover {
+                color: $value !important;
+                transition: all linear 300ms;
+            }
+        }
+    }
+}
+
+// $hover-bg
+@mixin hover-bg($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $theme-colors {
+        .hover-bg#{$grid-breakpoints}-#{$key} {
+            transition: all linear 300ms;
+
+            &:hover {
+                background-color: $value !important;
+                transition: all linear 300ms;
+            }
+        }
+    }
+}
+
+// $bg
+@mixin bg-colors($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $theme-colors {
+        .bg#{$grid-breakpoints}-#{$key} {
+            background-color: $value !important;
+        }
+    }
+}
+
+// $h1-h6
+@mixin h1-h6($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $h1-h6 {
+
+        .#{$key}#{$grid-breakpoints} {
+            font-size: $value !important;
+        }
+    }
+}
+
+// $font-weights
+@mixin font-weight($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $font-weights {
+
+        .font-weight#{$grid-breakpoints}-#{$key} {
+            font-weight: $value !important;
+        }
+    }
+}
+
+// $font-sizes
+@mixin font-size($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $font-sizes {
+
+        .font-size#{$grid-breakpoints}-#{$key} {
+            font-size: $value !important;
+        }
+    }
+}
+
+// $border-0
+@mixin border-0($grid-breakpoints: null) {
+
+    .border#{$grid-breakpoints}-0 {
+        border: 0 !important;
+    }
+}
+
+
+// .border         { border: $border-width solid $border-color !important; }
+// .border-top     { border-top: $border-width solid $border-color !important; }
+// .border-right   { border-right: $border-width solid $border-color !important; }
+// .border-bottom  { border-bottom: $border-width solid $border-color !important; }
+// .border-left    { border-left: $border-width solid $border-color !important; }
+
+// $border-color
+@mixin border-color($grid-breakpoints: null) {
+
+    @each $key,
+    $value in $theme-colors {
+        .border#{$grid-breakpoints}-#{$key} {
+            border: $border-width solid $value !important;
+        }
+
+        .border-top#{$grid-breakpoints} {
+            border-top: $border-width solid $border-color !important;
+        }
+
+        .border-top#{$grid-breakpoints}-#{$key} {
+            border-top: $border-width solid $value !important;
+        }
+
+        .border-bottom#{$grid-breakpoints} {
+            border-bottom: $border-width solid $border-color !important;
+        }
+
+        .border-bottom#{$grid-breakpoints}-#{$key} {
+            border-bottom: $border-width solid $value !important;
+        }
+
+        .border-right#{$grid-breakpoints} {
+            border-right: $border-width solid $border-color !important;
+        }
+
+        .border-right#{$grid-breakpoints}-#{$key} {
+            border-right: $border-width solid $value !important;
+        }
+
+        .border-left#{$grid-breakpoints} {
+            border-left: $border-width solid $border-color !important;
+        }
+
+        .border-left#{$grid-breakpoints}-#{$key} {
+            border-left: $border-width solid $value !important;
+        }
+    }
+}
+
+
+
+// 加上斷點
+@include hover-color();
+@include hover-bg();
+@include font-size();
+@include border-color();
+
+@include media-breakpoint-up(md) {
+    @include width(-md);
+    @include h1-h6(-md);
+    @include font-weight(-md);
+    @include hover-bg(-md);
+    @include font-size(-md);
+    @include bg-colors(-md);
+    @include border-0(-md);
+    @include border-color(-md);
+}
+
+@include media-breakpoint-up(lg) {
+    @include width(-lg);
+    @include h1-h6(-lg);
+    @include font-weight(-lg);
+    @include hover-bg(-lg);
+    @include font-size(-lg);
+    @include bg-colors(-lg);
+    @include border-0(-lg);
+    @include border-color(-lg);
+}

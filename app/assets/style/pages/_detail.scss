@@ -1,0 +1,73 @@
+.banner__img {
+    @include img-cover(247px);
+}
+
+
+
+.gallery {
+    &__mainImg {
+        @include img-cover(268px);
+
+        @include media-breakpoint-up(lg) {
+            height: 434px;
+        }
+    }
+
+    &__minorImg {
+        @include img-cover(132px);
+
+        @include media-breakpoint-up(lg) {
+            height: 213px;
+        }
+
+        &--sm {
+            @include img-cover(93px);
+            width: 160px;
+
+            @include media-breakpoint-up(lg) {
+                height: 151px;
+                width: 246px;
+            }
+        }
+    }
+}
+
+
+
+.roomType__list {
+    .card {
+        border-radius: 4px 4px 0 0;
+
+        @include media-breakpoint-up(md) {
+            border-radius: 8px 0 0 8px;
+        }
+    }
+
+    img {
+        @include img-cover(150px);
+        border-radius: 4px 0 0 0;
+
+        @include media-breakpoint-up(lg) {
+            height: 175px;
+            border-radius: 8px 0 0 8px;
+        }
+    }
+}
+
+
+
+.addRoom {
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    max-height: 0;
+    transform: translateY(100%);
+    transition: all .3s;
+
+
+    &.show {
+        transform: translateY(0);
+        max-height: 500px;
+        transition: all .3s;
+    }
+}

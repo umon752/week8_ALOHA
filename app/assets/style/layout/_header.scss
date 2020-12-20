@@ -1,0 +1,3 @@
+.logo {
+    @include text-hidden(96px, 24px, "../images/logo-aloha.svg");
+}

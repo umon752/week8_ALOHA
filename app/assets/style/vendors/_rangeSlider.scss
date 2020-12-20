@@ -1,0 +1,33 @@
+.ui-slider {
+    &.ui-slider-horizontal {
+        height: 2px;
+        background: $primary;
+    }
+
+    &.ui-widget-content {
+        border: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .ui-state-default {
+        background: $primary;
+        border-radius: 50px;
+        border: 0;
+        width: 16px;
+        height: 16px;
+    }
+
+    .ui-slider-handle {
+        top: -8px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .ui-widget-header {
+        border: 0;
+        background: $primary;
+    }
+}

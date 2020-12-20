@@ -1,0 +1,30 @@
+.navbar-expand-lg .navbar-toggler {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.collapse:not(.show) {
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.navbar-collapse {
+  @include media-breakpoint-up(md) {
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+}
+
+.navbar-nav {
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+    }
+  }
+}

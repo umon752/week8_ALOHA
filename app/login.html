@@ -1,0 +1,78 @@
+---
+title: Login | ALOHA
+layout: ./app/layout_login.ejs
+engine: ejs
+current: login
+---
+
+
+
+<!-- 背景圖 -->
+<div class="row no-gutters d-none d-md-block" data-aos="fade-right">
+    <div class="col-12 col-xl-7 px-0">
+        <img src="./assets/images/login.jpg" class="login__img position-absolute" alt="Osaka Castel, Japan">
+    </div>
+</div>
+
+<section class="container">
+    <div class="row flex-column flex-xl-row justify-content-center align-items-center vh-100">
+        <!-- Logo、title -->
+        <div class="col-12 col-xl-8 d-inline-flex flex-column justify-content-between w-xl-auto vh-100 mb-6 mb-xl-0"
+            data-aos="fade-right">
+            <div class="d-flex d-xl-block align-items-center justify-content-between">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-md-6 px-0 px-md-8 px-lg-0">
+                    <h1 class="h6">
+                        <a class="logo navbar-brand" href="./index.html">ALOHA</a>
+                    </h1>
+                </nav>
+                <span class="material-icons d-md-none">
+                    close
+                </span>
+                <div class="d-none d-xl-block">
+                    <h2 class="h1 font-weight-bold d-none d-lg-block mb-4">An ideal hotel makes a<br>wonderful
+                        Trip.
+                    </h2>
+                    <p class="h6 text-black-200 d-none d-xl-block">Discover your dream destination and hotel on
+                        ALOHA.com
+                    </p>
+                </div>
+            </div>
+            <div
+                class="h6 bg-dark rounded text-white d-none d-md-inline-flex align-self-md-center align-self-xl-start py-2 px-3 mb-6">
+                <span class="material-icons mr-2">location_on</span>
+                Osaka Castel, Japan
+            </div>
+        </div>
+
+        <!-- Login -->
+        <div class="login col-12 col-md-6 col-xl-4" data-aos="fade-left">
+            <h2 class="font-weight-bold mb-4">Login</h2>
+            <form>
+                <div class="form-group input-group-lg">
+                    <label for="email" class="mb-1">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group input-group-lg mb-6">
+                    <label for="passwords" class="mb-1">Passwords</label>
+                    <input type="passwords" class="form-control" id="passwords">
+                </div>
+                <p class="font-size-sm mb-5">By signing in or creating an account, you agree with our
+                    <a href="#">Terms & Conditions and Privacy Statement</a>
+                </p>
+                <div class="custom-control custom-checkbox mb-7">
+                    <input type="checkbox" class="custom-control-input" id="Remember">
+                    <label class="custom-control-label" for="Remember">Remember me</label>
+                </div>
+                <a href="./member.html" class="btn btn-primary btn-lg font-weight-bold w-100 mb-2">LOGIN</a>
+                <p class="h6 text-center">Don’t have an account yet?
+                    <a href="#" class="font-weight-bold">Sign up</a>
+                </p>
+            </form>
+
+            <!-- <div class="bg-dark rounded text-white d-none d-md-inline-flex d-xl-none align-self-center py-2 px-3 mb-6">
+                <span class="material-icons mr-2">location_on</span>
+                Osaka Castel, Japan
+            </div> -->
+        </div>
+    </div>
+</section>

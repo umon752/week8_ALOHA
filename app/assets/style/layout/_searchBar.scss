@@ -1,0 +1,17 @@
+.searchBar {
+    &__item {
+        width: 120px;
+
+        @include media-breakpoint-up(md) {
+            width: 180px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 250px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 312px;
+        }
+    }
+}

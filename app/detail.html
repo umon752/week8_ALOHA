@@ -1,0 +1,430 @@
+---
+title: Bangkok | ALOHA
+layout: ./app/layout_detail.ejs
+engine: ejs
+current: detail
+---
+
+
+
+<!-- mobile img -->
+<div class="container-fulid d-md-none mb-4" data-aos="fade-up" data-aos-delay="600">
+    <!-- Swiper -->
+    <div class="swiper-container swiper__banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./assets/images/Rachada1.jpg" class="banner__img w-100" alt="Rachada Hotel">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/Rachada2.jpg" class="banner__img w-100" alt="Rachada Hotel">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/Rachada3.jpg" class="banner__img w-100" alt="Rachada Hotel">
+            </div>
+            <div class="swiper-slide">
+                <img src="./assets/images/Rachada4.jpg" class="banner__img w-100" alt="Rachada Hotel">
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next text-white p-2"></div>
+        <div class="swiper-button-prev text-white p-2"></div>
+    </div>
+</div>
+
+
+<!-- desktop img -->
+<div class="container d-none d-md-block">
+    <ul class="form-row mt-md-4 mt-lg-6 mb-md-6">
+        <li class="col-7 align-items-stretch mb-6" data-aos="fade-right" data-aos-delay="600">
+            <a href="#">
+                <img src="./assets/images/Rachada1.jpg" class="gallery__mainImg hover-opacity rounded w-100"
+                    alt="Rachada Hotel">
+            </a>
+        </li>
+
+        <li class="col" data-aos="fade-left" data-aos-delay="800">
+            <a href="#">
+                <img src="./assets/images/Rachada2.jpg"
+                    class="gallery__minorImg hover-opacity rounded w-100 mb-1 mb-lg-2" alt="Rachada Hotel">
+            </a>
+            <ul class="form-row d-flex">
+                <li class="col-6">
+                    <a href="#">
+                        <img src="./assets/images/Rachada3.jpg" class="gallery__minorImg hover-opacity rounded w-100"
+                            alt="Rachada Hotel">
+                    </a>
+                </li>
+                <li class="col-6 h-100">
+                    <a href="#">
+                        <img src="./assets/images/Rachada4.jpg"
+                            class="gallery__minorImg--sm hover-opacity rounded w-100 mb-1 mb-lg-2" alt="Rachada Hotel">
+                    </a>
+                    <a href="#" class="font-size-sm h5-lg btn btn-dark btn-lg font-weight-bold w-100 h-100 py-lg-4">See
+                        All 10
+                        photos</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<section class="container mb-9 mb-lg-11">
+    <!-- introduction -->
+    <div class="row">
+        <div class="col-12 col-md-9 col-lg-7 mb-9 mb-lg-11" data-aos="fade-right" data-aos-delay="800">
+            <div class="d-flex flex-column flex-md-row">
+                <h2 class="font-weight-bold text-black-300 mr-4 mb-2 mb-md-0">Rachada Hotel</h2>
+                <div class="d-flex align-items-center">
+                    <span class="material-icons">grade</span>
+                    <span class="material-icons">grade</span>
+                    <span class="material-icons">grade</span>
+                    <span class="material-icons">grade</span>
+                    <span class="h6 h5-lg text-black-200 ml-1">4.0 (283)</span>
+                </div>
+            </div>
+            <p class="font-size-sm h6-md text-primary mb-4 mb-md-6" data-aos="fade-right">318 Phaya
+                Thai Road, Ratchathewi,
+                Phaya Thai, 10400
+                Bangkok,
+                Thailand</p>
+            <p class="h6 text-black-200" data-aos="fade-right">The Rachada Hotel is an
+                establishment that provides paid
+                lodging
+                on a
+                short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large
+                suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities,
+                upholstered chairs, a flat screen television, and en-suite bathrooms.</p>
+        </div>
+    </div>
+    <!-- Select your room -->
+    <div class="row" data-aos="fade-right">
+        <div class="col">
+            <h3 class="h3 font-weight-bold text-black-300 mb-4 mb-md-6">Select
+                your room</h3>
+            <div class="d-none d-md-block mb-9" data-aos="fade-right">
+                <span class="h6 text-black-200 bg-light rounded py-2 px-4 mr-2">Bangkok, Thailand</span>
+                <span class="h6 text-black-200 bg-light rounded py-2 px-4 mr-2">17 June - 19 June・2 nights</span>
+                <span class="h6 text-black-200 bg-light rounded py-2 px-4 mr-6">2 adults・1 room</span>
+                <a href="#" class="text-primary font-weight-bold">EDIT DETAIL</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room type title -->
+    <ul class="row border-bottom d-none d-md-flex pb-2 mb-6" data-aos="fade-right">
+        <li class="col-6">
+            <h4 class="font-weight-bold">ROOM TYPE</h4>
+        </li>
+        <li class="col-2 text-center">
+            <h4 class="font-weight-bold">SLEEPS</h4>
+        </li>
+        <li class="col-2 text-center">
+            <h4 class="font-weight-bold">PRICE</h4>
+        </li>
+        <li class="col-2 text-center">
+            <h4 class="font-weight-bold">ROOMS</h4>
+        </li>
+    </ul>
+    <!-- Room type list -->
+    <ul class="roomType__list row border-bottom-md align-items-center pb-4 pb-lg-6 mb-2 mb-md-5" data-aos="fade-right">
+        <li class="col-12 col-md-6">
+            <div class="card border border-md-0">
+                <div class="row no-gutters align-items-center">
+                    <a href="#" class="col-6">
+                        <img src="./assets/images/Chatuchack2.jpg" class="card-img" alt="Deluxe
+                            Double Room A">
+                    </a>
+                    <div class="col-6">
+                        <div class="card-body pl-2 pl-lg-4">
+                            <h5 class="card-title text-black-300 font-weight-bold mb-0 mb-lg-1">Deluxe
+                                Double Room A
+                            </h5>
+                            <p class="card-text font-size-sm text-black-200 mb-4">1 bed (Queen size)</p>
+                            <div class="d-flex flex-wrap mb-2 mb-md-0">
+
+                                <p class="card-text h6 text-black-200 d-flex w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">wifi</span>
+                                    <span class="d-none d-lg-inline-block">Wi-Fi</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-2 w-0 w-lg-100 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        tv
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Television</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-0 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        restaurant
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Breakfast</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-3 w-0 w-lg-100">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        ac_unit
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Air Conditioner</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        room_service
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Room Service</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-1 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        smoke_free
+                                    </span>
+                                    <span class=" d-none d-lg-inline-block">Smoke Free</span>
+                                </p>
+                            </div>
+                            <div class="d-md-none">
+                                <span class="material-icons">person</span>
+                                <span class="material-icons">person</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-2 text-center d-none d-md-block">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+        </li>
+        <li class="col-12 col-md-4 px-md-0">
+            <div
+                class="row bg-light bg-md-white rounded-bottom mx-auto d-flex justify-content-center flex-md-row-reverse w-100 w-md-auto">
+                <div class="col-6 d-flex justify-content-between align-items-center p-2 p-md-0">
+                    <button class="addRoom--show material-icons btn hover-text-primary">remove</button>
+                    <span class="text-black-200">0</span>
+                    <button class="addRoom--show material-icons btn hover-text-primary">add</button>
+                </div>
+                <div
+                    class="col-6 d-flex flex-column justify-content-center align-items-md-center align-items-end p-2 p-md-0">
+                    <del class="h6 text-black-200">TWD 1,600</del>
+                    <h6 class="h5 font-weight-bold">TWD <span class="text-primary">1,490</span></h6>
+                    <p class="font-size-sm text-black-200 d-none d-md-block">per night</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="roomType__list row border-bottom-md align-items-center pb-4 pb-lg-6 mb-2 mb-md-5" data-aos="fade-right">
+        <li class="col-12 col-md-6">
+            <div class="card border border-md-0">
+                <div class="row no-gutters align-items-center">
+                    <a href="#" class="col-6">
+                        <img src="./assets/images/roomB.jpg" class="card-img" alt="Deluxe Double Room B">
+                    </a>
+                    <div class="col-6">
+                        <div class="card-body pl-2 pl-lg-4">
+                            <h5 class="card-title text-black-300 font-weight-bold mb-0 mb-lg-1">Deluxe Double Room B
+                            </h5>
+                            <p class="card-text font-size-sm text-black-200 mb-4">1 bed (Queen size)</p>
+                            <div class="d-flex flex-wrap mb-2 mb-md-0">
+
+                                <p class="card-text h6 text-black-200 d-flex w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">wifi</span>
+                                    <span class="d-none d-lg-inline-block">Wi-Fi</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-2 w-0 w-lg-100 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        tv
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Television</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-0 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        restaurant
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Breakfast</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-3 w-0 w-lg-100">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        ac_unit
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Air Conditioner</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        room_service
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Room Service</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-1 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        smoke_free
+                                    </span>
+                                    <span class=" d-none d-lg-inline-block">Smoke Free</span>
+                                </p>
+                            </div>
+                            <div class="d-md-none">
+                                <span class="material-icons">person</span>
+                                <span class="material-icons">person</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+        <li class="col-2 text-center d-none d-md-block">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+        </li>
+        <li class="col-12 col-md-4 px-md-0">
+            <div
+                class="row bg-light bg-md-white rounded-bottom mx-auto d-flex justify-content-center flex-md-row-reverse w-100 w-md-auto">
+                <div class="col-6 d-flex justify-content-between align-items-center p-2 p-md-0">
+                    <button class="addRoom--show material-icons btn hover-text-primary">remove</button>
+                    <span class="text-black-200">0</span>
+                    <button class="addRoom--show material-icons btn hover-text-primary">add</button>
+                </div>
+                <div
+                    class="col-6 d-flex flex-column justify-content-center align-items-md-center align-items-end p-2 p-md-0">
+                    <h6 class="h5 font-weight-bold">TWD 1,600</h6>
+                    <p class="font-size-sm text-black-200 d-none d-md-block">per night</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="roomType__list row align-items-center pb-4 pb-lg-6" data-aos="fade-right">
+        <li class="col-12 col-md-6">
+            <div class="card border border-md-0">
+                <div class="row no-gutters align-items-center">
+                    <a href="#" class="col-6">
+                        <img src="./assets/images/Rachada1.jpg" class="card-img" alt="Deluxe Suite with Pool">
+                    </a>
+                    <div class="col-6">
+                        <div class="card-body pl-2 pl-lg-4">
+                            <h5 class="card-title text-black-300 font-weight-bold mb-0 mb-lg-1">Deluxe Suite with Pool
+                            </h5>
+                            <p class="card-text font-size-sm text-black-200 mb-4">1 bed (Queen size)</p>
+                            <div class="d-flex flex-wrap mb-2 mb-md-0">
+
+                                <p class="card-text h6 text-black-200 d-flex w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">wifi</span>
+                                    <span class="d-none d-lg-inline-block">Wi-Fi</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-4 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        tv
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Television</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-2 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        restaurant
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Breakfast</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-6 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        ac_unit
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Air Conditioner</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-1 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        kitchen
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Refrigerator</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-3 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        room_service
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Room Service</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-5 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        local_bar
+                                    </span>
+                                    <span class="d-none d-lg-inline-block">Mini bar</span>
+                                </p>
+                                <p class="card-text h6 text-black-200 d-flex order-lg-7 w-0 w-lg-50 mb-lg-2">
+                                    <span class="material-icons h6 mr-2 mr-lg-1">
+                                        smoke_free
+                                    </span>
+                                    <span class=" d-none d-lg-inline-block">Smoke Free</span>
+                                </p>
+                            </div>
+                            <div class="d-md-none">
+                                <span class="material-icons">person</span>
+                                <span class="material-icons">person</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+        <li class="col-2 text-center d-none d-md-block">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+        </li>
+        <li class="col-12 col-md-4 px-md-0">
+            <div
+                class="row bg-light bg-md-white rounded-bottom mx-auto d-flex justify-content-center flex-md-row-reverse w-100 w-md-auto">
+                <div class="col-6 d-flex justify-content-between align-items-center p-2 p-md-0">
+                    <button class="addRoom--show material-icons btn hover-text-primary">remove</button>
+                    <span class="text-black-200">0</span>
+                    <button class="addRoom--show material-icons btn hover-text-primary">add</button>
+                </div>
+                <div
+                    class="col-6 d-flex flex-column justify-content-center align-items-md-center align-items-end p-2 p-md-0">
+                    <h6 class="h5 font-weight-bold">TWD 1,980</h6>
+                    <p class="font-size-sm text-black-200 d-none d-md-block">per night</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- Subscribe for Exclusive Offer -->
+<section class="bg-light" data-aos="fade-up">
+    <div class="container">
+        <div class="row flex-wrap justify-content-between align-items-center py-6" data-aos="fade-up"
+            data-aos-delay="500">
+            <div class="col-12 col-md-4 col-lg-5 mb-4 mb-md-0">
+
+                <h2 class="h3 h2-lg font-weight-bold text-center text-md-left">
+                    Subscribe for
+                    Exclusive
+                    Offer
+                </h2>
+            </div>
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="input-group align-items-center justify-content-end flex-nowrap">
+                    <input type="text" class="form-control border-white py-4 h-100" placeholder="Your email address"
+                        aria-label="subscribe" aria-describedby="subscribe">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-lg font-weight-bold px-md-7" type="button"
+                            id="subscribe">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- addRoom -->
+<div class="addRoom bg-black-300 rounded-top-lg position-fixed w-100 py-6">
+    <div class="container">
+        <div class="row flex-md-row">
+            <div class="col-12 col-md-6 text-right text-md-left mb-6 mb-md-0">
+                <p class="font-size-sm text-secondary">1 room・2 night</p>
+                <h4 class="h3 font-weight-bold text-white">TWD 3,960</h4>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-between justify-content-md-end">
+                <a href="#"
+                    class="addRoom--cancel btn btn-outline-white font-weight-bold w-50 w-md-auto py-4 px-7 mr-2">CANCEL</a>
+                <a href="./reverse.html" class="btn btn-primary font-weight-bold w-50 py-4 w-md-auto px-7">RESERVE</a>
+            </div>
+        </div>
+    </div>
+</div>

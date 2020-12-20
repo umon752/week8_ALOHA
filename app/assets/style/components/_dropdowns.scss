@@ -1,0 +1,20 @@
+.dropdown-menu {
+    max-height: 0px;
+    transition-property: max-height, opacity;
+    transition-duration: .3s, .6s;
+    overflow: hidden;
+    z-index: 120;
+    display: inherit;
+    opacity: 0;
+
+    &.show {
+        transition-property: max-height, opacity;
+        transition-duration: .5s, .0s;
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    @include media-breakpoint-up(md) {
+        box-shadow: 0px 3px 5px rgba(83, 83, 83, 0.3);
+    }
+}

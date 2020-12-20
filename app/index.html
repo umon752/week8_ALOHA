@@ -1,0 +1,524 @@
+---
+title: ALOHA
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<header id="carouselExampleControls" class="carousel slide position-relative" data-ride="carousel" data-aos="fade-up"
+  data-aos-delay="600">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/images/index-banner.jpg" class="d-block w-100">
+      <div class="carousel-caption">
+        <h2 class="h2 h1-md font-weight-bold font-weight-md-bolder">Discover your ideal hotel</h2>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <div class="searchBox container position-absolute">
+    <div class="bg-light rounded-lg d-flex justify-content-between flex-wrap p-6">
+      <!-- search location -->
+      <div class="searchBox__item dropdown mb-4 mb-lg-0">
+        <button class="btn btn-white hover-bg-white border-0 d-flex w-100 p-4" type="button" id="location"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="material-icons mr-4">location_on</span><span class="text-black-200">Destination</span>
+        </button>
+        <!-- dropdown-menu -->
+        <ul class="dropdown-menu w-100" aria-labelledby="location">
+          <li>
+            <a class="dropdown-item d-flex mt-2" href="#">
+              <span class="material-icons mr-2">grade</span>
+              <div>Bangkok
+                <span class="text-black-100 font-size-sm d-block">Thailand</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons mr-2">grade</span>
+              <div>Osaka
+                <span class="text-black-100 font-size-sm d-block">Japan</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons mr-2">grade</span>
+              <div>Roma
+                <span class="text-black-100 font-size-sm d-block">Italy</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons mr-2">grade</span>
+              <div>Paris
+                <span class="text-black-100 font-size-sm d-block">London</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex mb-2" href="#">
+              <span class="material-icons mr-2">grade</span>
+              <div>Reykjavík
+                <span class="text-black-100 font-size-sm d-block">Iceland</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- search date -->
+      <label class="searchBox__item position-relative mb-4 mb-lg-0">
+        <input type="text" name="daterange"
+          class="datepicker__input btn btn-white hover-bg-white border-0 text-black-200 text-left text-break w-100 p-4" />
+        <span class="datepicker__icon material-icons position-absolute cursor-pointer">date_range</span>
+      </label>
+
+      <!-- search guests -->
+      <div class="searchBox__item dropdown mb-4 mb-lg-0">
+        <button class="btn btn-white hover-bg-white border-0 d-flex w-100 p-4" type="button" id="guests"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="material-icons mr-4">person</span><span class="text-black-200">Guests</span>
+        </button>
+        <!-- dropdown-menu -->
+        <ul class="dropdown-menu w-100" aria-labelledby="guests">
+          <li class="d-flex align-items-center justify-content-between px-5 mb-2 mt-2" href="#">
+            <p>Adult</p>
+            <div>
+              <button class="material-icons btn hover-text-primary pl-0">remove</button>
+              <span class="text-black-200">2</span>
+              <button class="material-icons btn hover-text-primary pr-0">add</button>
+            </div>
+          </li>
+
+          <li class="d-flex align-items-center justify-content-between px-5 mb-2" href="#">
+            <p>Child</p>
+            <div>
+              <button class="material-icons btn hover-text-primary pl-0">remove</button>
+              <span class="text-black-200">0</span>
+              <button class="material-icons btn hover-text-primary pr-0">add</button>
+            </div>
+          </li>
+
+          <li class="d-flex align-items-center justify-content-between px-5 mb-2" href="#">
+            <p>Room</p>
+            <div>
+              <button class="material-icons btn hover-text-primary pl-0">remove</button>
+              <span class="text-black-200">1</span>
+              <button class="material-icons btn hover-text-primary pr-0">add</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- search btn -->
+      <button class="btn btn-primary font-weight-bold btn-lg w-100 w-lg-auto" type="button">
+        SEARCH
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Top Choices -->
+<section class="topChoices container mb-9 mb-lg-11" data-aos="fade-right" data-aos-delay="600">
+  <h3 class="h2 font-weight-bold mb-6">Top Choices</h3>
+  <nav class="mb-6" data-aos="fade-right">
+    <div class="nav nav-tabs flex-nowrap" id="nav-tab" role="tablist">
+      <a class="nav-link h4 h3-md font-weight-bold text-black-200 active px-4 px-md-6" id="nav-bali-tab"
+        data-toggle="tab" href="#bali" role="tab" aria-controls="bali" aria-selected="true">Bali<sup>128</sup></a>
+      <a class="nav-link h4 h3-md font-weight-bold text-black-200 px-4 px-md-6" id="nav-okinawa-tab" data-toggle="tab"
+        href="#okinawa" role="tab" aria-controls="okinawa" aria-selected="false">Okinawa<sup>67</sup></a>
+      <a class="nav-link h4 h3-md font-weight-bold text-black-200 px-4 px-md-6" id="nav-taipei-tab" data-toggle="tab"
+        href="#taipei" role="tab" aria-controls="taipei" aria-selected="false">Taipei<sup>53</sup></a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent" data-aos="fade-right">
+    <div class="tab-pane fade show active" id="bali" role="tabpanel" aria-labelledby="nav-bali-tab">
+      <!-- Swiper -->
+      <div class="position-relative swiper__card">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top1.jpg" class="card-img-top rounded-lg" alt="Hotel Aqua">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Hotel Aqua</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">5.0</span>
+                    <span class="font-size-sm text-black-100">・2k reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 2,480
+                    <del class="font-size-sm text-black-100">TWD 3,980</del>
+                  </h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top2.jpg" class="card-img-top rounded-lg" alt="Mr. Kawasaki Inn">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Mr. Kawasaki Inn</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・500 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 3,380</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top3.jpg" class="card-img-top rounded-lg" alt="Weekly Paradise">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Weekly Paradise</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・470 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 4,780</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top4.jpg" class="card-img-top rounded-lg" alt="Beast Hotel">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Beast Hotel</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・283 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 1,980</h5>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-next bg-light text-black rounded-circle p-6"></div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="okinawa" role="tabpanel" aria-labelledby="nav-okinawa-tab">
+      <!-- Swiper -->
+      <div class="position-relative swiper__card">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top1.jpg" class="card-img-top rounded-lg" alt="Hotel Aqua">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Hotel Aqua</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">5.0</span>
+                    <span class="font-size-sm text-black-100">・2k reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 2,480
+                    <del class="font-size-sm text-black-100">TWD 3,980</del>
+                  </h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top2.jpg" class="card-img-top rounded-lg" alt="Mr. Kawasaki Inn">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Mr. Kawasaki Inn</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・500 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 3,380</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top3.jpg" class="card-img-top rounded-lg" alt="Weekly Paradise">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Weekly Paradise</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・470 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 4,780</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top4.jpg" class="card-img-top rounded-lg" alt="Beast Hotel">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Beast Hotel</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・283 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 1,980</h5>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-next bg-light text-black rounded-circle p-6"></div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="taipei" role="tabpanel" aria-labelledby="nav-taipei-tab">
+      <!-- Swiper -->
+      <div class="position-relative swiper__card">
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top1.jpg" class="card-img-top rounded-lg" alt="Hotel Aqua">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Hotel Aqua</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">5.0</span>
+                    <span class="font-size-sm text-black-100">・2k reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 2,480
+                    <del class="font-size-sm text-black-100">TWD 3,980</del>
+                  </h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top2.jpg" class="card-img-top rounded-lg" alt="Mr. Kawasaki Inn">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Mr. Kawasaki Inn</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・500 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 3,380</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top3.jpg" class="card-img-top rounded-lg" alt="Weekly Paradise">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Weekly Paradise</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・470 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 4,780</h5>
+                </div>
+              </a>
+            </li>
+            <li class="col-10 col-md-5 col-lg-3 swiper-slide">
+              <a href="#" class="card">
+                <img src="./assets/images/top4.jpg" class="card-img-top rounded-lg" alt="Beast Hotel">
+                <div class="card-body pt-2 pb-0">
+                  <h4 class="h5 card-title text-black-300 font-weight-bold mb-2">Beast Hotel</h4>
+                  <div class="text-black-300 d-flex align-items-center mb-2 mr-1">
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons">star</span>
+                    <span class="material-icons mr-1">star</span>
+                    <span class="text-black-200">4.0</span>
+                    <span class="font-size-sm text-black-100">・283 reviews</span>
+                  </div>
+                  <h5 class="h6 card-text text-black-200">TWD 1,980</h5>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-next bg-light text-black rounded-circle p-6"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section class="popular container mb-9 mb-lg-11" data-aos="fade-right">
+  <h3 class="h2 font-weight-bold mb-6">Popular Destinations</h3>
+  <ul class="row" data-aos="fade-right">
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="#" class="card bg-dark text-white">
+        <img src="./assets/images/Osaka.jpg" class="card-img" alt="Osaka">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
+          <h5 class="card-title h3 font-weight-bold">Osaka</h5>
+        </div>
+      </a>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="#" class="card bg-dark text-white">
+        <img src="./assets/images/Kyoto.jpg" class="card-img" alt="Kyoto">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
+          <h5 class="card-title h3 font-weight-bold">Kyoto</h5>
+        </div>
+      </a>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="#" class="card bg-dark text-white">
+        <img src="./assets/images/Reykjavic.jpg" class="card-img" alt="Reykjavic">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">ICELAND</h6>
+          <h5 class="card-title h3 font-weight-bold">Reykjavic</h5>
+        </div>
+      </a>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="#" class="card bg-dark text-white">
+        <img src="./assets/images/Paris.jpg" class="card-img" alt="Paris">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">FRANCE</h6>
+          <h5 class="card-title h3 font-weight-bold">Paris</h5>
+        </div>
+      </a>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="#" class="card bg-dark text-white">
+        <img src="./assets/images/Roman.jpg" class="card-img" alt="Roma">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">ITALY</h6>
+          <h5 class="card-title h3 font-weight-bold">Roma</h5>
+        </div>
+      </a>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
+      <a href="./result.html" class="card bg-dark text-white">
+        <img src="./assets/images/Bangkok.jpg" class="card-img" alt="Bangkok">
+        <div class="card-img-overlay">
+          <h6 class="card-text font-sizw-sm font-weight-bold">THAILAND</h6>
+          <h5 class="card-title h3 font-weight-bold">Bangkok</h5>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- Get Inspiration -->
+<section class="inspiration container mb-9 mb-lg-11" data-aos="fade-right">
+  <div class="d-flex justify-content-between mb-6">
+    <h3 class="h2 font-weight-bold">Get Inspiration</h3>
+    <a href="#" class="btn btn-outline-primary btn-lg h6 font-weight-bold">SEE MORE</a>
+  </div>
+
+  <!-- Swiper -->
+  <div class="position-relative swiper__card" data-aos="fade-right">
+    <div class="swiper-container">
+      <ul class="swiper-wrapper">
+        <li class="col-10 col-md-5 col-lg-4 swiper-slide">
+          <a href="#" class="card">
+            <img src="./assets/images/italy.jpg" class="card-img-top rounded-lg" alt="Italy">
+            <div class="card-body pt-6 pb-0">
+              <h5 class=" card-title h3 font-weight-bold text-black-300 mb-2">The Fifth Most Visited Country</h5>
+              <p class="card-text text-black-200">Italy is the fifth most visited country in the world, with a total of
+                52.3
+                million…</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-10 col-md-5 col-lg-4 swiper-slide">
+          <a href="#" class="card">
+            <img src="./assets/images/Thailand.jpg" class="card-img-top rounded-lg" alt="Thailand">
+            <div class="card-body pt-6 pb-0">
+              <h5 class=" card-title h3 font-weight-bold text-black-300 mb-2">Visit Thailand for Bangkok</h5>
+              <p class="card-text text-black-200">Asian tourists primarily visit Thailand for Bangkok and the
+                historical, natural, and…</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-10 col-md-5 col-lg-4 swiper-slide">
+          <a href="#" class="card">
+            <img src="./assets/images/NewZealand.jpg" class="card-img-top rounded-lg" alt="NewZealand">
+            <div class="card-body pt-6 pb-0">
+              <h5 class=" card-title h3 font-weight-bold text-black-300 mb-2">Lord of the Rings Tour</h5>
+              <p class="card-text text-black-200">The national cuisine has been described as Pacific Rim, incorporating
+                the native Māori…</p>
+            </div>
+          </a>
+        </li>
+        <li class="col-10 col-md-5 col-lg-4 swiper-slide">
+          <a href="#" class="card">
+            <img src="./assets/images/Thailand.jpg" class="card-img-top rounded-lg" alt="Thailand">
+            <div class="card-body pt-6 pb-0">
+              <h5 class=" card-title h3 font-weight-bold text-black-300 mb-2">Lord of the Rings Tour</h5>
+              <p class="card-text text-black-200">The national cuisine has been described as Pacific Rim, incorporating
+                the native Māori…</p>
+            </div>
+          </a>
+        </li>
+    </div>
+    </ul>
+
+    <div class="swiper-button-next bg-light text-black p-6 rounded-circle"></div>
+  </div>
+</section>
+
+<!-- Subscribe for Exclusive Offer -->
+<section class="bg-light" data-aos="fade-up">
+  <div class="container d-flex flex-wrap justify-content-center align-items-center py-12">
+    <h2 class="h1 font-weight-bold mb-4 mb-md-6" data-aos="fade-up" data-aos-delay="500">Subscribe for Exclusive Offer
+    </h2>
+    <div class="input-group align-items-center justify-content-center flex-nowrap" data-aos="fade-up">
+      <input type="text" class="subscribe__input form-control border-white flex-grow-1 flex-md-grow-0 py-4 h-100"
+        placeholder="Your email address" aria-label="subscribe" aria-describedby="subscribe">
+      <div class="input-group-append">
+        <button class="btn btn-primary btn-lg font-weight-bold px-md-7" type="button" id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+  </div>
+</section>

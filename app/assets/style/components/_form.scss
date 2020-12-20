@@ -1,0 +1,21 @@
+// detail.html 圖片區塊間距
+.form-row {
+    margin-right: -2px;
+    margin-left: -2px;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: -4px;
+        margin-left: -4px;
+    }
+}
+
+.form-row>.col,
+.form-row>[class*="col-"] {
+    padding-right: 2px;
+    padding-left: 2px;
+
+    @include media-breakpoint-up(lg) {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}

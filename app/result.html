@@ -1,0 +1,779 @@
+---
+title: Bangkok | ALOHA
+layout: ./app/layout_result.ejs
+engine: ejs
+current: result
+---
+
+
+
+
+<div class="container">
+    <div class="row mt-4 mt-md-6 mb-9 mb-lg-11">
+        <!-- sidebar Bangkok3,240 -->
+        <div class="col-12 col-md-4" data-aos="fade-right" data-aos-delay="600">
+            <h2 class="font-weight-bold text-center text-md-left mb-2 mb-md-6">
+                Bangkok<sup class="text-primary">3,240</sup></h2>
+            <sidebar class="bg-light d-none d-md-block p-6">
+                <!-- Deals -->
+                <h3 class="h5 font-weight-bold mb-4">Deals</h3>
+                <ul class="border-bottom-white pb-6 mb-6">
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="free-cancellation">
+                        <label class="custom-control-label text-black-200" for="free-cancellation">Free
+                            cancellation</label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="no-Prepayment">
+                        <label class="custom-control-label text-black-200" for="no-Prepayment">No prepayment</label>
+                    </li>
+                    <li class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="special-offers">
+                        <label class="custom-control-label text-black-200" for="special-offers">Special offers</label>
+                    </li>
+                </ul>
+                <!-- Popular Filter -->
+                <h3 class="h5 font-weight-bold mb-4">Popular Filter</h3>
+                <ul class="border-bottom-white pb-6 mb-6">
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="breakfast-included">
+                        <label class="custom-control-label text-black-200" for="breakfast-included">Breakfast
+                            included</label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="free-Wi-Fi">
+                        <label class="custom-control-label text-black-200" for="free-Wi-Fi">Free Wi-Fi</label>
+                    </li>
+                    <li class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="swimming-pool">
+                        <label class="custom-control-label text-black-200" for="swimming-pool">Swimming pool</label>
+                    </li>
+                </ul>
+                <!-- Budget -->
+                <h3 class="h5 font-weight-bold mb-4">Budget </h3>
+                <div id="slider-range" class="mb-4"></div>
+                <div class="border-bottom-white d-flex justify-content-between pb-6 mb-6">
+                    <div class="budget__minValue bg-white position-relative w-50 p-2 mr-lg-5">
+                        <h4 class="font-size-sm font-weight-bold text-black-300">MIN PRICE</h4>
+                        <input type="text" id="min" readonly
+                            class="border-0 font-size-sm h6-lg text-black-200 text-nowrap w-100">
+                    </div>
+                    <div class="bg-white w-50 p-2">
+                        <h4 class="font-size-sm font-weight-bold text-black-300">Max price</h4>
+                        <input type="text" id="max" readonly
+                            class="border-0 font-size-sm h6-lg text-black-200 text-nowrap w-100">
+                    </div>
+                </div>
+                <!-- Rating -->
+                <h3 class="h5 font-weight-bold mb-4">Rating</h3>
+                <ul class="border-bottom-white pb-6 mb-6">
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating-5">
+                        <label class="custom-control-label d-flex" for="rating-5">
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="h6 h5-lg text-black-200 ml-2">5.0</span>
+                        </label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating-4">
+                        <label class="custom-control-label d-flex" for="rating-4">
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="h6 h5-lg text-black-200 ml-2">4.0</span>
+                        </label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating-3">
+                        <label class="custom-control-label d-flex" for="rating-3">
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="h6 h5-lg text-black-200 ml-2">3.0</span>
+                        </label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating-2">
+                        <label class="custom-control-label d-flex" for="rating-2">
+                            <span class="material-icons">grade</span>
+                            <span class="material-icons">grade</span>
+                            <span class="h6 h5-lg text-black-200 ml-2">2.0</span>
+                        </label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating-1">
+                        <label class="custom-control-label d-flex" for="rating-1">
+                            <span class="material-icons">grade</span>
+                            <span class="h6 h5-lg text-black-200 ml-2">1.0</span>
+                        </label>
+                    </li>
+                    <li class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="unrated">
+                        <label class="custom-control-label h6 h5-lg text-black-200" for="unrated">Unrated</label>
+                    </li>
+                </ul>
+                <!-- Stay Type -->
+                <h3 class="h5 font-weight-bold mb-4">Stay Type</h3>
+                <ul>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="hotel">
+                        <label class="custom-control-label h6 h5-lg text-black-200" for="hotel">Hotel</label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="apartment">
+                        <label class="custom-control-label h6 h5-lg text-black-200" for="apartment">Apartment</label>
+                    </li>
+                    <li class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="uniquet">
+                        <label class="custom-control-label h6 h5-lg text-black-200" for="uniquet">Unique</label>
+                    </li>
+                    <li class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="hostel">
+                        <label class="custom-control-label h6 h5-lg text-black-200" for="hostel">Hostel</label>
+                    </li>
+                </ul>
+            </sidebar>
+        </div>
+
+        <!-- content -->
+        <div class="result col-12 col-md-8" data-aos="fade-left" data-aos-delay="600">
+            <!-- filter mobile -->
+            <nav class="navigation d-flex d-md-none mb-2 py-4">
+                <a href="#" class="h6 font-weight-bold border-right d-flex flex-fill justify-content-center">
+                    <span class="material-icons mr-2">
+                        filter_list
+                    </span>
+                    FILTER</a>
+                <a href="#" class="h6 font-weight-bold d-flex flex-fill justify-content-center">
+                    <span class="material-icons mr-2">
+                        sort
+                    </span>
+                    SORT</a>
+            </nav>
+            <!-- filter desktop -->
+            <nav class="navigation d-none d-md-block mt-4 mb-6">
+                <a href="#" class="font-weight-bold text-nowrap active pr-6">Recommended</a>
+                <a href="#" class="font-weight-bold text-nowrap pr-6">Lowest Price</a>
+                <a href="#" class="font-weight-bold text-nowrap pr-6">Best value</a>
+                <a href="#" class="font-weight-bold text-nowrap pr-6">Distance to City Center</a>
+            </nav>
+            <!-- list -->
+            <ul class="bg-light bg-md-white">
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <!-- Swiper -->
+                            <div class="swiper-container swiper__card__img">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/Rachada1.jpg" class="card-img" alt="Rachada Hotel">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/Rachada2.jpg" class="card-img" alt="Rachada Hotel">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/Rachada3.jpg" class="card-img" alt="Rachada Hotel">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/Rachada4.jpg" class="card-img" alt="Rachada Hotel">
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next bg-light text-black rounded-circle p-2"></div>
+                                <div class="swiper-button-prev bg-light text-black rounded-circle p-2"></div>
+                            </div>
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Rachada, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・2 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Rachada Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">4.0
+                                            (283)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 text-nowrap mb-lg-1">Deluxe Double
+                                            Room</h4>
+                                        <p class="card-text font-size-sm text-black-2000 text-nowrap mb-1 mb-lg-4">2
+                                            guests・1 bed
+                                            (Queen
+                                            size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 text-nowrap py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 text-nowrap py-1 px-2">Free
+                                                No prepayment</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD 1,980</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Phaya.jpg" class="card-img" alt="Forever Place">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Phaya Thai, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・2.9 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Forever Place</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">5.0
+                                            (121)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Standard Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (Queen
+                                            size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <del
+                                            class="font-size-sm h6-md h5-lg text-black-200 d-md-none d-lg-block mb-md-1">TWD
+                                            1,980</del>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD <span
+                                                class="text-primary">1,680</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Bangkapi.jpg" class="card-img" alt="LUV Hotel">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Bangkapi, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・14 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">LUV Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">4.0
+                                            (325)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Standard Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (Queen
+                                            size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD 2,460</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Chatuchack1.jpg" class="card-img" alt="WOW Life Hotel">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Chatuchack, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・12 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">WOW Life Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">4.0
+                                            (204)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Standard Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (Queen
+                                            size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">No
+                                                prepayment</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <del
+                                            class="font-size-sm h6-md h5-lg text-black-200 d-md-none d-lg-block mb-md-1">TWD
+                                            2,880</del>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD <span
+                                                class="text-primary">2,240</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Chatuchack2.jpg" class="card-img" alt="Celebrity Palace">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Chatuchack, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・8 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Celebrity Palace</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">5.0
+                                            (189)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Standard Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (Queen
+                                            size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">No
+                                                prepayment</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <del
+                                            class="font-size-sm h6-md h5-lg text-black-200 d-md-none d-lg-block mb-md-1">TWD
+                                            2,120</del>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD <span
+                                                class="text-primary">1,980</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/RangRak.jpg" class="card-img" alt="RR Space">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Rang Rak, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・4.4 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">RR Space</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">4.0
+                                            (112)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Deluxe Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (King size)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD 2,090</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Watana1.jpg" class="card-img" alt="Bangkok Hostel">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Watana, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・6 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Bangkok Hostel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">5.0
+                                            (102)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Twin Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・2 beds (2
+                                            twins)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">No
+                                                prepayment</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD 880</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/Watana2.jpg" class="card-img" alt="Watana First Hostel">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Watana, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・6 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Watana First Hostel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">3.0
+                                            (608)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Twin Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・2 beds (2
+                                            twins)
+                                        </p>
+                                        <div class="d-none d-md-flex flex-column flex-lg-row">
+                                            <span
+                                                class="rounded-pill bg-light font-size-xs font-size-lg-sm text-black-200 py-1 px-2 mr-1 mb-1 mb-lg-0">Free
+                                                cancellation</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <del
+                                            class="font-size-sm h6-md h5-lg text-black-200 d-md-none d-lg-block mb-md-1">TWD
+                                            1,280</del>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD <span
+                                                class="text-primary">790</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card border-bottom-md mb-1 mb-md-4 mb-lg-6 pb-md-4 pb-lg-6"
+                    data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/DinDaeng1.jpg" class="card-img" alt="DD Space">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Din Daeng, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・7 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">DD Space</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">34.0
+                                            (138)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Standard Double Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・1 bed
+                                            (Queen size)
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <del
+                                            class="font-size-sm h6-md h5-lg text-black-200 d-md-none d-lg-block mb-md-1">TWD
+                                            1,700</del>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD <span
+                                                class="text-primary">1,240</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="result__list card" data-aos="fade-left">
+                    <div class="row no-gutters align-items-center">
+                        <a href="./detail.html" class="col-5 col-md-4">
+                            <img src="./assets/images/DinDaeng2.jpg" class="card-img" alt="Dininn Hotel">
+                        </a>
+                        <div class="col-7 col-md-8">
+                            <div class="card-body px-2 px-lg-4 py-1">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-1 mb-md-2 mb-lg-4">
+                                    <div>
+                                        <a href="#" class="font-size-sm">Din Daeng, Bangkok</a>
+                                        <span class="font-size-sm text-black-200 d-none d-lg-inline">・7 km from
+                                            center</span>
+                                        <h3 class="card-title font-weight-bold hover-underline h5 h3-lg">
+                                            <a href="./detail.html" class="text-black-300">Dininn Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <div class="d-flex flex-md-column flex-lg-row align-items-center">
+                                        <div>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                            <span class="material-icons h6">grade</span>
+                                        </div>
+                                        <span class="font-size-sm h6-lg text-black-200 text-md-right ml-1">3.0
+                                            (446)</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                                    <div>
+                                        <h4 class="h6 font-weight-bold text-black-200 mb-lg-1">Deluxe Twin Room</h4>
+                                        <p class="card-text font-size-sm text-black-200 mb-1 mb-lg-4">2 guests・2 beds (2
+                                            twins)
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-column text-right w-100 w-md-auto">
+                                        <p class="font-size-sm text-black-200 d-none d-md-block mb-1">per night</p>
+                                        <h4 class="h5 h3-lg font-weight-bold text-nowrap">TWD 3,450</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- pagination -->
+            <div class="col-12 px-md-0">
+                <nav aria-label="Page navigation example" class="mt-4 mt-md-6 mt-lg-9" data-aos="fade-left">
+                    <ul
+                        class="pagination justify-content-between align-items-center rounded-lg bg-light font-weight-bold p-4">
+                        <li class="page-item border-primary rounded disabled">
+                            <a class="page-link px-2 px-lg-4" href="#" tabindex="-1" aria-disabled="true">
+                                <span class="d-none d-lg-block">PREVIOUS</span>
+                                <span class="material-icons d-flex d-lg-none">chevron_left</span>
+                            </a>
+                        </li>
+                        <ul class="d-flex">
+                            <li class="page-item"><a class="page-link rounded-0" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link rounded-0" href="#">9</a></li>
+                        </ul>
+                        <li class="page-item">
+                            <a class="page-link bg-primary text-white rounded px-2 px-lg-4" href="#">
+                                <span class="d-none d-lg-block">NEXT</span>
+                                <span class="material-icons d-flex d-lg-none">chevron_right</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Subscribe for Exclusive Offer -->
+<section class="bg-light" data-aos="fade-up">
+    <div class="container">
+        <div class="row flex-wrap justify-content-between align-items-center py-6" data-aos="fade-up"
+            data-aos-delay="500">
+            <div class="col-12 col-md-4 col-lg-5 mb-4 mb-md-0">
+
+                <h2 class="h3 h2-lg font-weight-bold text-center text-md-left">
+                    Subscribe for
+                    Exclusive
+                    Offer
+                </h2>
+            </div>
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="input-group align-items-center justify-content-end flex-nowrap">
+                    <input type="text" class="form-control border-white py-4 h-100" placeholder="Your email address"
+                        aria-label="subscribe" aria-describedby="subscribe">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-lg font-weight-bold px-md-7" type="button"
+                            id="subscribe">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
