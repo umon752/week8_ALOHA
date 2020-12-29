@@ -24,23 +24,23 @@ $(document).ready(() => {
 
 
   // addRoom > show
-  $('.addRoom--show').click(function (e) {
+  $('.addRoom__addBtn').click(function (e) {
     e.preventDefault();
-    $('.addRoom').addClass('show');
+    $('.addRoom').addClass('addRoom--show');
   });
   // addRoom > hide
-  $('.addRoom--cancel').click(function (e) {
+  $('.addRoom__cancelBtn').click(function (e) {
     e.preventDefault();
-    $('.addRoom').removeClass('show');
+    $('.addRoom').removeClass('addRoom--show');
   });
 
 
 
   // reverse.html > collapse
-  $('.arrowIcon--rotate').click(function (e) {
+  $('.arrowIcon').click(function (e) {
     e.preventDefault();
-    $('.arrowIcon--rotate .material-icons').toggleClass('rotate');
-    $('.totalText--hide').toggleClass('hide');
+    $('.arrowIcon .material-icons').toggleClass('arrowIcon--rotate');
+    $('.totalText').toggleClass('totalText--hide');
   });
 
 });
@@ -136,4 +136,12 @@ var swiper = new Swiper('.swiper__banner', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+
+
+/* AOS */
+AOS.init({
+  duration: 600,
+  once: true
 });
