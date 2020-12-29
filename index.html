@@ -16,7 +16,7 @@
   <!-- datepicker（CDN） -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <!-- rangeSlider（CDN） -->
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
   <!-- all -->
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
@@ -187,7 +187,7 @@
 <!-- Top Choices -->
 <section class="topChoices container mb-9 mb-lg-11" data-aos="fade-right" data-aos-delay="600">
   <h3 class="h2 font-weight-bold mb-6">Top Choices</h3>
-  <nav class="mb-6" data-aos="fade-right">
+  <nav class="mb-6">
     <div class="nav nav-tabs flex-nowrap" id="nav-tab" role="tablist">
       <a class="nav-link h4 h3-md font-weight-bold text-black-200 active px-4 px-md-6" id="nav-bali-tab"
         data-toggle="tab" href="#bali" role="tab" aria-controls="bali" aria-selected="true">Bali<sup>128</sup></a>
@@ -197,7 +197,7 @@
         href="#taipei" role="tab" aria-controls="taipei" aria-selected="false">Taipei<sup>53</sup></a>
     </div>
   </nav>
-  <div class="tab-content" id="nav-tabContent" data-aos="fade-right">
+  <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="bali" role="tabpanel" aria-labelledby="nav-bali-tab">
       <!-- Swiper Bail -->
       <div class="position-relative swiper__card">
@@ -447,58 +447,88 @@
 <!-- Popular Destinations -->
 <section class="popular container mb-9 mb-lg-11" data-aos="fade-right">
   <h3 class="h2 font-weight-bold mb-6">Popular Destinations</h3>
-  <ul class="row" data-aos="fade-right">
+  <ul class="row">
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="#" class="card bg-dark text-white">
         <img src="./assets/images/Osaka.jpg" class="card-img" alt="Osaka">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
-          <h5 class="card-title h3 font-weight-bold">Osaka</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
+            <h5 class="card-title h3 font-weight-bold">Osaka</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="#" class="card bg-dark text-white">
         <img src="./assets/images/Kyoto.jpg" class="card-img" alt="Kyoto">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
-          <h5 class="card-title h3 font-weight-bold">Kyoto</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">JAPAN</h6>
+            <h5 class="card-title h3 font-weight-bold">Kyoto</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="#" class="card bg-dark text-white">
         <img src="./assets/images/Reykjavic.jpg" class="card-img" alt="Reykjavic">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">ICELAND</h6>
-          <h5 class="card-title h3 font-weight-bold">Reykjavic</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">ICELAND</h6>
+            <h5 class="card-title h3 font-weight-bold">Reykjavic</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="#" class="card bg-dark text-white">
         <img src="./assets/images/Paris.jpg" class="card-img" alt="Paris">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">FRANCE</h6>
-          <h5 class="card-title h3 font-weight-bold">Paris</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">FRANCE</h6>
+            <h5 class="card-title h3 font-weight-bold">Paris</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="#" class="card bg-dark text-white">
         <img src="./assets/images/Roman.jpg" class="card-img" alt="Roma">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">ITALY</h6>
-          <h5 class="card-title h3 font-weight-bold">Roma</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">ITALY</h6>
+            <h5 class="card-title h3 font-weight-bold">Roma</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
       <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Bangkok.jpg" class="card-img" alt="Bangkok">
-        <div class="card-img-overlay">
-          <h6 class="card-text font-sizw-sm font-weight-bold">THAILAND</h6>
-          <h5 class="card-title h3 font-weight-bold">Bangkok</h5>
+        <div class="card-img-overlay d-flex justify-content-between align-items-center">
+          <div>
+            <h6 class="card-text font-sizw-sm font-weight-bold">THAILAND</h6>
+            <h5 class="card-title h3 font-weight-bold">Bangkok</h5>
+          </div>
+          <span class="material-icons">
+            expand_more
+          </span>
         </div>
       </a>
     </li>
@@ -509,11 +539,11 @@
 <section class="inspiration container mb-9 mb-lg-11" data-aos="fade-right">
   <div class="d-flex justify-content-between mb-6">
     <h3 class="h2 font-weight-bold">Get Inspiration</h3>
-    <a href="#" class="btn btn-outline-primary btn-lg h6 font-weight-bold">SEE MORE</a>
+    <a href="#" class="btn btn-outline-primary h6 font-weight-bold d-flex align-items-center py-2 px-4">SEE MORE</a>
   </div>
 
   <!-- Swiper -->
-  <div class="position-relative swiper__card" data-aos="fade-right">
+  <div class="position-relative swiper__card">
     <div class="swiper-container swiper__inspiration">
       <ul class="swiper-wrapper">
         <li class="col-10 col-md-5 col-lg-4 swiper-slide">
@@ -557,8 +587,8 @@
             </div>
           </a>
         </li>
+      </ul>
     </div>
-    </ul>
 
     <div class="swiper-button-next bg-light text-black p-6 rounded-circle"></div>
   </div>
@@ -630,16 +660,10 @@
 
   <!-- AOS（CDN） -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 600,
-      once: true
-    });
-  </script>
   <!-- swiper（CDN） -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- jQuery（CDN） -->
-  <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- BS4 -->
   <script src="./assets/js/vendors.js"></script>
   <!-- datepicker（CDN） -->

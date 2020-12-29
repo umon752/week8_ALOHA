@@ -11088,6 +11088,24 @@ input:focus {
     -o-transition: all linear 300ms;
     transition: all linear 300ms; }
 
+.h1 {
+  font-size: 3rem !important; }
+
+.h2 {
+  font-size: 2rem !important; }
+
+.h3 {
+  font-size: 1.5rem !important; }
+
+.h4 {
+  font-size: 1.25rem !important; }
+
+.h5 {
+  font-size: 1rem !important; }
+
+.h6 {
+  font-size: 0.875rem !important; }
+
 .font-size-sm {
   font-size: 0.75rem !important; }
 
@@ -12352,17 +12370,17 @@ footer .footer__navLink__text {
   @media (min-width: 992px) {
     .topChoices {
       margin-top: 120px; } }
-  .topChoices .swiper__card img {
+  .topChoices .card-img-top {
     height: 164px;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center center;
        object-position: center center; }
     @media (min-width: 768px) {
-      .topChoices .swiper__card img {
+      .topChoices .card-img-top {
         height: 185px; } }
     @media (min-width: 992px) {
-      .topChoices .swiper__card img {
+      .topChoices .card-img-top {
         height: 175px; } }
 
 .popular .card:hover > .card-img-overlay {
@@ -12386,17 +12404,17 @@ footer .footer__navLink__text {
   background: transparent -o-linear-gradient(right, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; }
 
-.inspiration img {
+.inspiration .card-img-top {
   height: 181px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center; }
   @media (min-width: 768px) {
-    .inspiration img {
+    .inspiration .card-img-top {
       height: 158px; } }
   @media (min-width: 992px) {
-    .inspiration img {
+    .inspiration .card-img-top {
       height: 263px; } }
 
 .subscribe__input {
@@ -12436,7 +12454,7 @@ footer .footer__navLink__text {
     @media (min-width: 768px) {
       .result__list {
         border-radius: 8px 0 0 8px; } }
-    .result__list img {
+    .result__list .card-img {
       height: 150px;
       -o-object-fit: cover;
          object-fit: cover;
@@ -12444,13 +12462,13 @@ footer .footer__navLink__text {
          object-position: center center;
       border-radius: 0; }
       @media (min-width: 768px) {
-        .result__list img {
+        .result__list .card-img {
           border-radius: 8px 0 0 8px; } }
       @media (min-width: 992px) {
-        .result__list img {
+        .result__list .card-img {
           height: 175px; } }
 
-.banner__img {
+.bannerImg {
   height: 247px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -12488,13 +12506,13 @@ footer .footer__navLink__text {
         height: 151px;
         width: 246px; } }
 
-.roomType__list .card {
+.roomType .card {
   border-radius: 4px 4px 0 0; }
   @media (min-width: 768px) {
-    .roomType__list .card {
+    .roomType .card {
       border-radius: 8px 0 0 8px; } }
 
-.roomType__list img {
+.roomType .card-img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -12502,7 +12520,7 @@ footer .footer__navLink__text {
      object-position: center center;
   border-radius: 4px 0 0 0; }
   @media (min-width: 992px) {
-    .roomType__list img {
+    .roomType .card-img {
       height: 175px;
       border-radius: 8px 0 0 8px; } }
 
@@ -12517,7 +12535,7 @@ footer .footer__navLink__text {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s; }
-  .addRoom.show {
+  .addRoom.addRoom--show {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -12536,14 +12554,14 @@ footer .footer__navLink__text {
       margin-bottom: 193px; } }
 
 /* jQuery toggle效果 */
-.totalText--hide.hide {
+.totalText.totalText--hide {
   visibility: hidden; }
 
-.arrowIcon--rotate .material-icons {
+.arrowIcon .material-icons {
   -webkit-transition: all linear 300ms;
   -o-transition: all linear 300ms;
   transition: all linear 300ms; }
-  .arrowIcon--rotate .material-icons.rotate {
+  .arrowIcon .material-icons.arrowIcon--rotate {
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -12560,7 +12578,7 @@ footer .footer__navLink__text {
     .reverseSuccess {
       margin-bottom: 163px; } }
 
-.login__img {
+.loginImg {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -12615,7 +12633,7 @@ footer .footer__navLink__text {
     @media (min-width: 768px) {
       .member__list {
         border-radius: 8px 0 0 8px; } }
-    .member__list img {
+    .member__list .card-img {
       height: 226px;
       -o-object-fit: cover;
          object-fit: cover;
@@ -12623,11 +12641,11 @@ footer .footer__navLink__text {
          object-position: center center;
       border-radius: 8px 8px 0 0; }
       @media (min-width: 768px) {
-        .member__list img {
+        .member__list .card-img {
           height: 186px;
           border-radius: 8px 0 0 8px; } }
       @media (min-width: 992px) {
-        .member__list img {
+        .member__list .card-img {
           height: 175px; } }
     @media (min-width: 768px) {
       .member__list .card-body {
