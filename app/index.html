@@ -1,8 +1,11 @@
 ---
 title: ALOHA
-layout: ./app/layout.ejs
+layout: ./app/ejs/layout.ejs
 engine: ejs
 current: index
+header: normal
+subscribe: normal
+footer: footer_language
 ---
 
 <header id="carouselExampleControls" class="carousel slide position-relative" data-ride="carousel" data-aos="fade-up"
@@ -10,6 +13,21 @@ current: index
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="./assets/images/index-banner.jpg" class="d-block w-100">
+      <div class="carousel__item__mask"></div>
+      <div class="carousel-caption">
+        <h2 class="h2 h1-md font-weight-bold font-weight-md-bolder">Discover your ideal hotel</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/images/top3.jpg" class="d-block w-100">
+      <div class="carousel__item__mask"></div>
+      <div class="carousel-caption">
+        <h2 class="h2 h1-md font-weight-bold font-weight-md-bolder">Enjoy your vacation</h2>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/images/roomA.jpg" class="d-block w-100">
+      <div class="carousel__item__mask"></div>
       <div class="carousel-caption">
         <h2 class="h2 h1-md font-weight-bold font-weight-md-bolder">Discover your ideal hotel</h2>
       </div>
@@ -393,7 +411,7 @@ current: index
   <h3 class="h2 font-weight-bold mb-6">Popular Destinations</h3>
   <ul class="row">
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
-      <a href="#" class="card bg-dark text-white">
+      <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Osaka.jpg" class="card-img" alt="Osaka">
         <div class="card-img-overlay d-flex justify-content-between align-items-center">
           <div>
@@ -407,7 +425,7 @@ current: index
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
-      <a href="#" class="card bg-dark text-white">
+      <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Kyoto.jpg" class="card-img" alt="Kyoto">
         <div class="card-img-overlay d-flex justify-content-between align-items-center">
           <div>
@@ -421,7 +439,7 @@ current: index
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
-      <a href="#" class="card bg-dark text-white">
+      <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Reykjavic.jpg" class="card-img" alt="Reykjavic">
         <div class="card-img-overlay d-flex justify-content-between align-items-center">
           <div>
@@ -435,7 +453,7 @@ current: index
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
-      <a href="#" class="card bg-dark text-white">
+      <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Paris.jpg" class="card-img" alt="Paris">
         <div class="card-img-overlay d-flex justify-content-between align-items-center">
           <div>
@@ -449,7 +467,7 @@ current: index
       </a>
     </li>
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-6">
-      <a href="#" class="card bg-dark text-white">
+      <a href="./result.html" class="card bg-dark text-white">
         <img src="./assets/images/Roman.jpg" class="card-img" alt="Roma">
         <div class="card-img-overlay d-flex justify-content-between align-items-center">
           <div>
@@ -535,21 +553,5 @@ current: index
     </div>
 
     <div class="swiper-button-next bg-light text-black p-6 rounded-circle"></div>
-  </div>
-</section>
-
-<!-- Subscribe for Exclusive Offer -->
-<section class="bg-light" data-aos="fade-up">
-  <div class="container d-flex flex-wrap justify-content-center align-items-center py-12">
-    <h2 class="h3 h1-md font-weight-bold mb-4 mb-md-6" data-aos="fade-up" data-aos-delay="500">Subscribe for Exclusive
-      Offer
-    </h2>
-    <div class="input-group align-items-center justify-content-center flex-nowrap" data-aos="fade-up">
-      <input type="text" class="subscribe__input form-control border-white flex-grow-1 flex-md-grow-0 py-4 h-100"
-        placeholder="Your email address" aria-label="subscribe" aria-describedby="subscribe">
-      <div class="input-group-append">
-        <button class="btn btn-primary btn-lg font-weight-bold px-md-7" type="button" id="subscribe">SUBSCRIBE</button>
-      </div>
-    </div>
   </div>
 </section>

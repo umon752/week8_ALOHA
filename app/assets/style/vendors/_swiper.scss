@@ -36,8 +36,17 @@
 // result.html
 .swiper__card__img {
 
+    &:hover>.swiper-button-prev {
+        opacity: 1;
+    }
+
+    &:hover>.swiper-button-next {
+        opacity: 1;
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
+        opacity: 0;
         top: 50%;
         width: 20px;
         height: 20px;
