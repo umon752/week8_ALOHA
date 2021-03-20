@@ -35,7 +35,7 @@ $(document).ready(function () {
         range: true,
         min: 0,
         max: 10000,
-        values: [800, 4000],
+        values: [0, 10000],
         slide: function slide(event, ui) {
           $('#min').val('TWD ' + ui.values[0]);
           $('#max').val('TWD ' + ui.values[1] + '+');
