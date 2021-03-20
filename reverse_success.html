@@ -22,43 +22,55 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-md-6 px-md-8 px-lg-0" data-aos="fade-down">
-    <div class="container px-md-0">
-      <div class="d-flex row-md-reverse align-items-center justify-content-between w-100 w-md-auto">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <h1 class="h6">
-          <a class="logo navbar-brand" href="./index.html">ALOHA</a>
-        </h1>
-        <a class="nav-link text-dark d-md-none" href="./login.html">Login</a>
-      </div>
+  <!-- loading -->
+  <div
+    class="loading vw-100 vh-100 d-flex justify-content-center align-items-center fixed-top overflow-hidden bg-white">
+    <img class="loading__img" src="./assets/images/logo-A-01.svg">
+    <img class="loading__img" src="./assets/images/logo-L-02.svg">
+    <img class="loading__img" src="./assets/images/logo-O-03.svg">
+    <img class="loading__img" src="./assets/images/logo-H-04.svg">
+    <img class="loading__img" src="./assets/images/logo-A-05.svg">
+  </div>
 
-      <div class="collapse navbar-collapse d-none d-md-block" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="material-icons nav-link dropdown-toggle d-flex justify-content-center align-items-center pr-9"
-              href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              language
-            </a>
-            <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item h6 py-2 mt-2" href="#">English</a>
-              <a class="dropdown-item h6 py-2" href="#">繁體中文</a>
-              <a class="dropdown-item h6 py-2 mb-2" href="#">Français</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link pr-9" href="#">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./login.html">Login</a>
-          </li>
-        </ul>
-      </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-md-6 px-md-8 px-lg-0" data-aos="fade-down">
+  <div class="container px-md-0">
+    <div class="d-flex row-md-reverse align-items-center justify-content-between w-100 w-md-auto">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="h6">
+        <a class="logo navbar-brand" href="./index.html">ALOHA</a>
+      </h1>
+      <a class="nav-link text-dark d-md-none" href="./login.html">Login</a>
     </div>
-  </nav>
+
+    <div class="collapse navbar-collapse d-none d-md-block" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="material-icons nav-link dropdown-toggle d-flex justify-content-center align-items-center pr-9"
+            href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            language
+          </a>
+          <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item h6 py-2 mt-2" href="#">English</a>
+            <a class="dropdown-item h6 py-2" href="#">繁體中文</a>
+            <a class="dropdown-item h6 py-2 mb-2" href="#">Français</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-9" href="#">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
 
   
 <section class="reverseSuccess container">
@@ -127,6 +139,7 @@
     </div>
 </section>
 
+  
   <footer class="container border-top px-md-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-center">
       <div
@@ -174,7 +187,10 @@
       </div>
     </nav>
   </footer>
+  
 
+  <!-- Anime（CDN） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <!-- AOS（CDN） -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- swiper（CDN） -->
@@ -191,6 +207,9 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- all -->
   <script src="./assets/js/all.js"></script>
+  <!-- Anime -->
+  <!-- <script src="./assets/js/anime.min.js"></script> -->
+</body>
 </body>
 
 </html>
