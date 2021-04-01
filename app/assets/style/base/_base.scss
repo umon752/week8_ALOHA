@@ -58,7 +58,8 @@ ul {
     padding: 0;
 }
 
-input {
+input,
+button {
     &:focus {
         outline: none;
     }

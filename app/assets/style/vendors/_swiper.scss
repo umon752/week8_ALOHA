@@ -26,7 +26,11 @@
 
     .swiper-button-next {
         top: 32%;
-        right: -25px;
+        right: -10px;
+
+        @include media-breakpoint-up(md) {
+            right: -25px;
+        }
     }
 
 }
