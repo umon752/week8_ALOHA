@@ -10544,7 +10544,8 @@ ul {
   list-style: none;
   padding: 0; }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none; }
 
 .swiper-button-prev,
@@ -10569,7 +10570,10 @@ input:focus {
 
 .swiper__card .swiper-button-next {
   top: 32%;
-  right: -25px; }
+  right: -10px; }
+  @media (min-width: 768px) {
+    .swiper__card .swiper-button-next {
+      right: -25px; } }
 
 .swiper__card__img:hover > .swiper-button-prev {
   opacity: 1; }
@@ -12321,10 +12325,11 @@ input:focus {
 
 .loading__img {
   height: 30px;
-  -webkit-box-reflect: below -0.8rem linear-gradient(transparent, #6b51e249); }
+  -webkit-box-reflect: below -0.5rem linear-gradient(transparent, #6b51e249); }
   @media (min-width: 768px) {
     .loading__img {
-      height: 50px; } }
+      height: 50px;
+      -webkit-box-reflect: below -0.8rem linear-gradient(transparent, #6b51e249); } }
 
 .logo {
   white-space: nowrap;
