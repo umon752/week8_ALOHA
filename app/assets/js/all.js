@@ -1,11 +1,11 @@
 const time = 1300;
 
 /* anime */
-anime.timeline({
+let animation = anime.timeline({
     loop: true
   })
   .add({
-    targets: '.loading__img',
+    targets: '.js-loading-img',
     translateY: ["2em", 0],
     translateZ: 0,
     opacity: [0, 1],
@@ -14,7 +14,7 @@ anime.timeline({
   })
 
   .add({
-    targets: '.loading__img',
+    targets: '.js-loading-img',
     translateX: [0, -50],
     opacity: [1, 0],
     duration: 500,
@@ -26,8 +26,9 @@ $(document).ready(() => {
   /* 1.3 秒後開始執行 */
   setTimeout(function () {
     // 設定 loading 畫面消失
-    $('.loading').addClass('loading--fadeOut');
-
+    $('.js-loading').addClass('loading--fadeOut');
+    // Anime 停止
+    animation.pause();
 
 
     /* rangeSlider */
@@ -54,23 +55,23 @@ $(document).ready(() => {
 
 
     // addRoom > show
-    $('.addRoom__addBtn').click(function (e) {
+    $('.js-addRoom-btn').click(function (e) {
       e.preventDefault();
-      $('.addRoom').addClass('addRoom--show');
+      $('.js-addRoom').addClass('addRoom--show');
     });
     // addRoom > hide
     $('.addRoom__cancelBtn').click(function (e) {
       e.preventDefault();
-      $('.addRoom').removeClass('addRoom--show');
+      $('.js-addRoom').removeClass('addRoom--show');
     });
 
 
 
     // reverse.html > collapse
-    $('.arrowIcon').click(function (e) {
+    $('.js-arrowIcon').click(function (e) {
       e.preventDefault();
-      $('.arrowIcon .material-icons').toggleClass('arrowIcon--rotate');
-      $('.totalText').toggleClass('totalText--hide');
+      $('.js-arrowIcon .material-icons').toggleClass('arrowIcon--rotate');
+      $('.js-totalText').toggleClass('totalText--hide');
     });
 
     /* AOS */
@@ -87,7 +88,7 @@ $(document).ready(() => {
 
 /* swiper__card */
 // swiper__bail 
-var swiper = new Swiper('.swiper__bail', {
+var swiper = new Swiper('.js-swiper-bail', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
@@ -102,7 +103,7 @@ var swiper = new Swiper('.swiper__bail', {
 });
 
 // swiper__okinawa 
-var swiper = new Swiper('.swiper__okinawa', {
+var swiper = new Swiper('.js-swiper-okinawa', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
@@ -117,7 +118,7 @@ var swiper = new Swiper('.swiper__okinawa', {
 });
 
 // swiper__taipei 
-var swiper = new Swiper('.swiper__taipei', {
+var swiper = new Swiper('.js-swiper-taipei', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
@@ -132,7 +133,7 @@ var swiper = new Swiper('.swiper__taipei', {
 });
 
 // swiper__inspiration
-var swiper = new Swiper('.swiper__inspiration', {
+var swiper = new Swiper('.js-swiper-inspiration', {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
@@ -148,7 +149,7 @@ var swiper = new Swiper('.swiper__inspiration', {
 
 
 /* swiper__card__img */
-var swiper = new Swiper('.swiper__card__img', {
+var swiper = new Swiper('.js-swiper-result', {
   slidesPerView: 1,
   loop: true,
   pagination: {
@@ -163,7 +164,7 @@ var swiper = new Swiper('.swiper__card__img', {
 
 
 /* swiper__banner */
-var swiper = new Swiper('.swiper__banner', {
+var swiper = new Swiper('.js-swiper-banner', {
   slidesPerView: 1,
   loop: true,
   pagination: {
