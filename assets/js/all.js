@@ -1,123 +1,135 @@
 "use strict";
 
-var loading = document.querySelector('.js-loading'); // Anime Loading 動畫
+function init() {
+  loading();
+  swiper();
+}
 
-var animation = anime.timeline({
-  loop: true
-}).add({
-  targets: '.js-loading-img',
-  translateY: ["2em", 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  duration: 800,
-  delay: function delay(el, i) {
-    return 60 * i;
-  }
-}).add({
-  targets: '.js-loading-img',
-  translateX: [0, -50],
-  opacity: [1, 0],
-  duration: 500,
-  delay: function delay(el, i) {
-    return 60 * i;
-  }
-});
+init();
 
-window.onload = function () {
-  // Loading 畫面消失
-  loading.classList.add('loading--fadeOut'); // Anime 停止
+function loading() {
+  // DOM
+  var loading = document.querySelector('.js-loading'); // Anime Loading 動畫
 
-  animation.pause(); // 載入 AOS
-
-  AOS.init({
-    duration: 600,
-    once: true
+  var animation = anime.timeline({
+    loop: true
+  }).add({
+    targets: '.js-loading-img',
+    translateY: ["2em", 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    duration: 800,
+    delay: function delay(el, i) {
+      return 60 * i;
+    }
+  }).add({
+    targets: '.js-loading-img',
+    translateX: [0, -50],
+    opacity: [1, 0],
+    duration: 500,
+    delay: function delay(el, i) {
+      return 60 * i;
+    }
   });
-}; // Swiper
-// index.html > bail 
 
+  window.onload = function () {
+    // Loading 畫面消失
+    loading.classList.add('loading--fadeOut'); // Anime 停止
 
-var swiperBail = new Swiper('.js-swiper-bail', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // index.html > okinawa 
+    animation.pause(); // 載入 AOS
 
-var swiperOkinawa = new Swiper('.js-swiper-okinawa', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // index.html > taipei 
+    AOS.init({
+      duration: 600,
+      once: true
+    });
+  };
+}
 
-var swiperTaipei = new Swiper('.js-swiper-taipei', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // index.html > inspiration
+function swiper() {
+  // index.html > bail 
+  var swiperBail = new Swiper('.js-swiper-bail', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // index.html > okinawa 
 
-var swiperInspiration = new Swiper('.js-swiper-inspiration', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // result.html > card
+  var swiperOkinawa = new Swiper('.js-swiper-okinawa', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // index.html > taipei 
 
-var swiperResult = new Swiper('.js-swiper-result', {
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // detail.html > banner
+  var swiperTaipei = new Swiper('.js-swiper-taipei', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // index.html > inspiration
 
-var swiperBanner = new Swiper('.js-swiper-banner', {
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
+  var swiperInspiration = new Swiper('.js-swiper-inspiration', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // result.html > card
+
+  var swiperResult = new Swiper('.js-swiper-result', {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // detail.html > banner
+
+  var swiperBanner = new Swiper('.js-swiper-banner', {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+}
+
 $(document).ready(function () {
   // RangeSlider 
   $(function () {
