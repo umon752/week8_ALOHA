@@ -1,7 +1,6 @@
 "use strict";
 
-var time = 1300;
-/* anime */
+var loading = document.querySelector('.js-loading'); // Anime Loading 動畫
 
 var animation = anime.timeline({
   loop: true
@@ -23,141 +22,136 @@ var animation = anime.timeline({
     return 60 * i;
   }
 });
+
+window.onload = function () {
+  // Loading 畫面消失
+  loading.classList.add('loading--fadeOut'); // Anime 停止
+
+  animation.pause(); // 載入 AOS
+
+  AOS.init({
+    duration: 600,
+    once: true
+  });
+}; // Swiper
+// index.html > bail 
+
+
+var swiperBail = new Swiper('.js-swiper-bail', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // index.html > okinawa 
+
+var swiperOkinawa = new Swiper('.js-swiper-okinawa', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // index.html > taipei 
+
+var swiperTaipei = new Swiper('.js-swiper-taipei', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // index.html > inspiration
+
+var swiperInspiration = new Swiper('.js-swiper-inspiration', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // result.html > card
+
+var swiperResult = new Swiper('.js-swiper-result', {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // detail.html > banner
+
+var swiperBanner = new Swiper('.js-swiper-banner', {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 $(document).ready(function () {
-  /* 1.3 秒後開始執行 */
-  setTimeout(function () {
-    // 設定 loading 畫面消失
-    $('.js-loading').addClass('loading--fadeOut'); // Anime 停止
-
-    animation.pause();
-    /* rangeSlider */
-
-    $(function () {
-      $('#slider-range').slider({
-        range: true,
-        min: 0,
-        max: 10000,
-        values: [0, 10000],
-        slide: function slide(event, ui) {
-          $('#min').val('TWD ' + ui.values[0]);
-          $('#max').val('TWD ' + ui.values[1] + '+');
-        }
-      });
-      $('#min').val('TWD ' + $('#slider-range').slider('values', 0));
-      $('#max').val('TWD ' + $('#slider-range').slider('values', 1) + '+');
+  // RangeSlider 
+  $(function () {
+    $('#slider-range').slider({
+      range: true,
+      min: 0,
+      max: 10000,
+      values: [0, 10000],
+      slide: function slide(event, ui) {
+        $('#min').val('TWD ' + ui.values[0]);
+        $('#max').val('TWD ' + ui.values[1] + '+');
+      }
     });
-    /* datepicker */
+    $('#min').val('TWD ' + $('#slider-range').slider('values', 0));
+    $('#max').val('TWD ' + $('#slider-range').slider('values', 1) + '+');
+  }); // Datepicker
 
-    $('input[name="daterange"]').daterangepicker(); // addRoom > show
+  $('input[name="daterange"]').daterangepicker(); // addRoom > show
 
-    $('.js-addRoom-btn').click(function (e) {
-      e.preventDefault();
-      $('.js-addRoom').addClass('addRoom--show');
-    }); // addRoom > hide
+  $('.js-addRoom-btn').click(function (e) {
+    e.preventDefault();
+    $('.js-addRoom').addClass('addRoom--show');
+  }); // addRoom > hide
 
-    $('.addRoom__cancelBtn').click(function (e) {
-      e.preventDefault();
-      $('.js-addRoom').removeClass('addRoom--show');
-    }); // reverse.html > collapse
+  $('.addRoom__cancelBtn').click(function (e) {
+    e.preventDefault();
+    $('.js-addRoom').removeClass('addRoom--show');
+  }); // reverse.html > collapse
 
-    $('.js-arrowIcon').click(function (e) {
-      e.preventDefault();
-      $('.js-arrowIcon .material-icons').toggleClass('arrowIcon--rotate');
-      $('.js-totalText').toggleClass('totalText--hide');
-    });
-    /* AOS */
-
-    AOS.init({
-      duration: 600,
-      once: true
-    });
-  }, time);
-});
-/* swiper__card */
-// swiper__bail 
-
-var swiper = new Swiper('.js-swiper-bail', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // swiper__okinawa 
-
-var swiper = new Swiper('.js-swiper-okinawa', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // swiper__taipei 
-
-var swiper = new Swiper('.js-swiper-taipei', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-}); // swiper__inspiration
-
-var swiper = new Swiper('.js-swiper-inspiration', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
-/* swiper__card__img */
-
-var swiper = new Swiper('.js-swiper-result', {
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
-});
-/* swiper__banner */
-
-var swiper = new Swiper('.js-swiper-banner', {
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  }
+  $('.js-arrowIcon').click(function (e) {
+    e.preventDefault();
+    $('.js-arrowIcon .material-icons').toggleClass('arrowIcon--rotate');
+    $('.js-totalText').toggleClass('totalText--hide');
+  });
 });
 "use strict";
 
